@@ -1,16 +1,18 @@
 {
+  "root": true,
+  "parser": "@typescript-eslint/parser",
   "env": {
     "browser": true,
-    "es2021": true,
-    "node": true
+    "es2021": true
   },
   "extends": [
+    "next",
+    "next/core-web-vitals",
     "eslint:recommended",
-    "plugin:import/errors",
     "plugin:react/recommended",
-    "plugin:jsx-a11y/recommended",
-    "prettier",
-    "prettier/react"
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended",
+    "prettier"
   ],
   "parserOptions": {
     "ecmaFeatures": {
@@ -19,10 +21,15 @@
     "ecmaVersion": 12,
     "sourceType": "module"
   },
-  "plugins": ["react", "import", "jsx-a11y", "react-hooks"],
+  "plugins": ["react", "@typescript-eslint"],
   "rules": {
-    "react/prop-types": 0,
-    "no-console": 1,
-    "react/react-in-jsx-scope": "off"
+    "react/jsx-uses-react": "off",
+    "react/react-in-jsx-scope": "off",
+    "@typescript-eslint/no-unused-vars": "error",
+    "@typescript-eslint/no-explicit-any": "error",
+    "no-console": 1
+  },
+  "globals": {
+    "React": "writable"
   }
 }
