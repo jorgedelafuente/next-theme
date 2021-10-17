@@ -1,9 +1,9 @@
 /** @jsxImportSource theme-ui */
 import Head from 'next/head';
 import Image from 'next/image';
-import { Box } from 'theme-ui'
+import { Box } from 'theme-ui';
 
-import styles from '../styles/Home.module.css'
+import styles from '../styles/Home.module.css';
 
 export default function Home(): React.ReactElement {
   return (
@@ -15,17 +15,19 @@ export default function Home(): React.ReactElement {
       </Head>
 
       <main className={styles.main}>
-        <div sx={{ variant: 'containers.page' }}>
-          <h1>Main</h1>
-        </div>
-
-        <Box p={4} color="white" bg="primary">
-          <div sx={{ variant: 'containers.page', color: 'secondary', border: '1px solid black', padding: '10px' }}>
-            Beep
+        <Box p={4} color="white" bg="white">
+          <div
+            sx={{
+              variant: 'containers.card',
+              color: 'black',
+              border: '1px solid secondary',
+              padding: '10px',
+            }}
+          >
+            This is a Next JS boilerplate with Typescript, Theme UI, eslint, Prettier,
+            Babel, PWA , Google Analytics, storybook.
           </div>
         </Box>
-
-
       </main>
 
       <footer className={styles.footer}>
@@ -43,5 +45,3 @@ export default function Home(): React.ReactElement {
     </div>
   );
 }
-
-

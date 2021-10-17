@@ -22,5 +22,4 @@ const theme = {
   },
 };
 
-// console.log('🚀 ~ file: theme.js ~ line 26 ~ theme', theme);
 export default theme;
