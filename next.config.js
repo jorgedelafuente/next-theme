@@ -10,6 +10,7 @@ const withPWA = require('next-pwa');
 
 module.exports = withPWA({
   reactStrictMode: true,
+  // swcMinify: true,
   env: {
     customKey: 'my-customKey',
     EXAMPLE_ENV: process.env.EXAMPLE_ENV,
