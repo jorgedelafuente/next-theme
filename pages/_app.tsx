@@ -1,15 +1,10 @@
 import type { AppProps } from 'next/app';
-import { ThemeProvider } from 'theme-ui'
+import "./../styles/globals.css"
 
-import theme from '../styles/theme'
-// import '../styles/globals.css';
-
-function MyApp({ Component, pageProps }: AppProps): React.ReactElement {
+function App({ Component, pageProps }: AppProps): React.ReactElement {
   return (
-    <ThemeProvider theme={theme}>
-      <Component {...pageProps} />
-    </ThemeProvider>
+    <Component {...pageProps} />
   )
 }
 
-export default MyApp;
+export default App;
